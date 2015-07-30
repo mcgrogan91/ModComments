@@ -2,3 +2,11 @@
 /node_modules
 Homestead.yaml
 .env
+.idea/.name
+.idea/encodings.xml
+.idea/ModComments.iml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/workspace.xml
+.idea/dictionaries/kmcgrogan.xml
+.idea/scopes/scope_settings.xml

@@ -2,19 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Profile;
-use App\Comment;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 use Response;
 
-class CommentController extends Controller
+class MeController extends Controller
 {
-
-    public function __construct()
-    {
-       $this->middleware('host');
-    }
     /**
      * Display a listing of the resource.
      *
@@ -22,7 +14,7 @@ class CommentController extends Controller
      */
     public function index()
     {
-        return Response::json(array('thing'=>'value1'), 200, array('Access-Control-Allow-Origin' => '*'));
+        return view('pages/home');
     }
 
     /**
@@ -32,7 +24,7 @@ class CommentController extends Controller
      */
     public function create()
     {
-        return Response::json(['thing'=>'value2'], 200, array('Access-Control-Allow-Origin' => '*'));
+
     }
 
     /**
@@ -64,16 +56,16 @@ class CommentController extends Controller
      */
     public function show($id)
     {
-      $comments = [];
-      $profile = Profile::where([
-        'tagpro_identifier' => $id
+        $comments = [];
+        $profile = Profile::where([
+            'tagpro_identifier' => $id
         ])->first();
-      if($profile) {
-        $comments = $profile->comments;
-      }
+        if($profile) {
+            $comments = $profile->comments;
+        }
 
-      return response(view('comments', ['comments' => $comments]))
-        ->header('Access-Control-Allow-Origin', '*');
+        return response(view('comments', ['comments' => $comments]))
+            ->header('Access-Control-Allow-Origin', '*');
 
         //return Response::json($comments, 200, array('Access-Control-Allow-Origin' => '*'));
     }
