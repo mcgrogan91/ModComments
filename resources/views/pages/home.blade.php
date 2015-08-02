@@ -116,24 +116,24 @@
         </div>
     </div>
 
-    <div class="content-section">
-        <span class="skills">Skills</span>
-        <a class="btn btn-sm btn-default" role="button" data-toggle="collapse" href="#knowledge" aria-expanded="true" aria-controls="knowledge">
-            Hide/Show
-        </a>
-        <br/>
-        <div id="skills" class="collapse in">
-            <div class="job">
-                <div class="title">Web Developer</div>
-                <div class="employer">d'Vinci Interactive</div>
-                <div class="dates">
-                    October 2014 - Current
-                </div>
-                <div class="info">
-                    Developing PHP solutions to satisfy client needs, including client API interactions.
-                </div>
-            </div>
+    {{--<div class="content-section">--}}
+        {{--<span class="skills">Skills</span>--}}
+        {{--<a class="btn btn-sm btn-default" role="button" data-toggle="collapse" href="#knowledge" aria-expanded="true" aria-controls="knowledge">--}}
+            {{--Hide/Show--}}
+        {{--</a>--}}
+        {{--<br/>--}}
+        {{--<div id="skills" class="collapse in">--}}
+            {{--<div class="job">--}}
+                {{--<div class="title">Web Developer</div>--}}
+                {{--<div class="employer">d'Vinci Interactive</div>--}}
+                {{--<div class="dates">--}}
+                    {{--October 2014 - Current--}}
+                {{--</div>--}}
+                {{--<div class="info">--}}
+                    {{--Developing PHP solutions to satisfy client needs, including client API interactions.--}}
+                {{--</div>--}}
+            {{--</div>--}}
 
-        </div>
-    </div>
+        {{--</div>--}}
+    {{--</div>--}}
 @stop
