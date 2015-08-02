@@ -40,6 +40,10 @@
         {
             list-style-type: none;
         }
+
+        #skills>ul {
+            padding-left: 15px;
+        }
     </style>
 @stop
 
