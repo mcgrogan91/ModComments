@@ -125,7 +125,7 @@
 
     <div class="content-section">
         <span class="section-header">Skills
-            <a class="btn btn-sm btn-default" role="button" data-toggle="collapse" href="#knowledge" aria-expanded="true" aria-controls="knowledge">
+            <a class="btn btn-sm btn-default" role="button" data-toggle="collapse" href="#skills" aria-expanded="true" aria-controls="skills">
                 Hide/Show
             </a>
         </span>
@@ -176,7 +176,6 @@
                         <li>Git</li>
                     </ul>
                 </li>
-            </ul>
             </ul>
 
         </div>
