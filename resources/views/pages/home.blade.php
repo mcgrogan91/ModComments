@@ -66,20 +66,28 @@
                     October 2014 - Current
                 </div>
                 <div class="info">
-                    Developing PHP solutions to satisfy client needs, including client API interactions.
+                    Developing PHP solutions in an agile development environment using both the CodeIgniter and Laravel PHP Frameworks.
+                    <br/><br/>
+                    Working with an in-house message queueing system, and facilitating a transition to a standard tested
+                    message queueing service.
                 </div>
             </div>
 
             <div class="job">
-                <div class="title">Software Developer</div>
+                <div class="title">Software Engineer</div>
                 <div class="employer">Versatile Systems, Inc</div>
                 <div class="dates">
                     February 2014 - October 2014
                 </div>
                 <div class="info">
-                    Worked with JavaEE, CSS3, HTML5, AngularJS, NodeJS, and plenty of other technologies to
-                    provide kiosk software that interacts with lender api's, and are located in thousands
-                    of stores nationwide so that they can generate in-store credit approvals to assist sales growth.
+                    Redesigned core aspects of a JavaEE based Kiosk application which enabled stores to offer
+                    instant in-store credit decisions from over 30 different lenders by interacting with their
+                    each of their SOAP API's. This resulted in millions of dollars of approved credit quarterly and a
+                    30% increase in sales.<br/><br/>
+                    Improved and tested a web-based Screenflow designer that leveraged AngularJS to
+                    present a clean interface which allowed clients to design their own content and upload it to
+                    their kiosks employing multiple built in gadgets for the clients convenience.<br/><br/>
+                    Lead a website redesign of an existing NodeJS website, rewriting most of the HTML/CSS front end.
                 </div>
             </div>
 
@@ -90,9 +98,13 @@
                     September 2013 - February 2014
                 </div>
                 <div class="info">
-                    Worked with .NET languages as well as the IBM MQ system to provide consulting solutions.
-                    Most of the development was focused on a Windows service that connected two systems,
-                    converting multiple client connections into a single database connection.
+                    Developed a message processing service that worked with an existing liquid
+                    dispensing system that communicated with DB2 and iSeries databases to determine
+                    if a liquid should be dispensed, and to record information about what liquids
+                    were dispensed using the Microsoft .NET framework.<br/><br/>
+                    Wrote detailed design and technical documentation approved by business and the
+                    customer laying out how a service would work, as well as what the inputs and outputs
+                    would be.
                 </div>
             </div>
 
@@ -103,12 +115,14 @@
                     February 2013 - September 2013
                 </div>
                 <div class="info">
-                    Implemented mission­-critical functionality in a large in-house J2EE project, including both frontend
-                    JSP/JSF technologies and backend Enterprise Beans.
-                    <br/>
-                    Assisted the core project developer of the VuFind Integrated Library System (ILS) in
-                    bugfixes and feature progression. Contributed to several enterprise-scale components
-                    in an effort to improve flexibility and security.
+                    Worked with the highly-normalized IBM Health Plan Data Model (HPDM) and DB2 9.1/10.0
+                    for the large majority of required data, implementing mission-critical functionality
+                    in a large in-house J2EE project, including both frontend JSP/JSF technologies and
+                    backend Enterprise Beans.
+                    <br/><br/>
+                    Aided development with a large scale Enterprise Java system to update and create new
+                    functionalities based on business requirements.<br/><br/>
+                    Ported existing PDF mail-merge templates to HTML5 and CSS3, using Apache Velocity for form-filling.
                 </div>
             </div>
 
@@ -120,8 +134,8 @@
                 </div>
                 <div class="info">
                     Assisted the core project developer of the VuFind Integrated Library System (ILS) in bugfixes and
-                    feature progression. Contributed to several enterprise-scale components in an effort to
-                    improve flexibility and security.
+                    feature progression. <br/><br/>
+                    Contributed to several enterprise-scale components in an effort to improve flexibility and security.
                 </div>
             </div>
         </div>
