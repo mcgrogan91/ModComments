@@ -162,7 +162,6 @@
                         <li>HTML5</li>
                         <li>CSS3</li>
                         <li>XML</li>
-                        <li>XML</li>
                         <li>Apache Velocity</li>
                         <li>Apache ANT Including Apache Ivy</li>
                         <li>Java ServerPages</li>
