@@ -22,7 +22,7 @@ class CommentController extends Controller
      */
     public function index()
     {
-        return Response::json(Comment::all());
+        return Response::json(Comment::all(), 200, array('Access-Control-Allow-Origin' => '*'));
     }
 
     /**
