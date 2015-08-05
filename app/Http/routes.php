@@ -25,3 +25,7 @@ Route::get('/contact', function () {
 });
 
 Route::resource('comment', 'CommentController');
+
+Route::get('/gishwhes', function() {
+    return view('pages.gishwhes.generator');
+});
