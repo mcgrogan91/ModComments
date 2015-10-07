@@ -18,10 +18,10 @@ class HostMiddleware
     public function handle($request, Closure $next)
     {
         
-        if($this->verifyReferrer(Request::server('HTTP_REFERER')))
-          return $next($request);
+        //if($this->verifyReferrer(Request::server('HTTP_REFERER')))
+        return $next($request);
 
-        throw new \Exception("WE DON'T LIKE ODD REMOTE PORTS");
+        //throw new \Exception("WE DON'T LIKE ODD REMOTE PORTS");
     }
 
     private function verifyReferrer($referrer)

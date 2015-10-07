@@ -1,6 +1,7 @@
 /vendor
 /node_modules
 Homestead.yaml
+*.sqlite
 .env
 .idea/.name
 .idea/encodings.xml
