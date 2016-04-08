@@ -9,7 +9,8 @@
         "laravel/framework": "5.1.*",
         "illuminate/Http": "^5.1",
         "illuminate/HTML": "^5.0",
-        "iamcal/lib_autolink": "^1.7"
+        "iamcal/lib_autolink": "^1.7",
+        "jaaulde/php-ipv4": "^1.1"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

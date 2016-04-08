@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5771ba55412d26051967cf209e93bfc8",
-    "content-hash": "ca1521a0f9f0cd87d73eb3e9d8798146",
+    "hash": "3ac6e20edb86d26d7d72b84d0fe045f4",
+    "content-hash": "9392ebe02c482e11f94c442bbcdded4f",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -294,6 +294,60 @@
                 }
             ],
             "time": "2015-01-01 16:31:18"
+        },
+        {
+            "name": "jaaulde/php-ipv4",
+            "version": "v1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/JAAulde/php-ipv4.git",
+                "reference": "d3bddc487f834ba974f2ed4e7220328e97d3820a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/JAAulde/php-ipv4/zipball/d3bddc487f834ba974f2ed4e7220328e97d3820a",
+                "reference": "d3bddc487f834ba974f2ed4e7220328e97d3820a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.6.*",
+                "satooshi/php-coveralls": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "JAAulde\\IP\\V4\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jim Auldridge",
+                    "email": "auldridgej@gmail.com",
+                    "homepage": "http://jaaulde.com",
+                    "role": "developer"
+                }
+            ],
+            "description": "PHP classes for working with IPV4 addresses and networks.",
+            "homepage": "https://github.com/JAAulde/php-ipv4",
+            "keywords": [
+                "IP",
+                "ban",
+                "blacklist",
+                "cidr",
+                "ipv4",
+                "network",
+                "range",
+                "subnet",
+                "whitelist"
+            ],
+            "time": "2015-07-29 19:47:21"
         },
         {
             "name": "jakub-onderka/php-console-color",
