@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace ModTools\Comments;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -10,6 +10,6 @@ class Comment extends Model
 
     public function profile()
     {
-      return $this->belongsTo('App\Profile');
+      return $this->belongsTo('ModTools\Comments\Profile');
     }
 }

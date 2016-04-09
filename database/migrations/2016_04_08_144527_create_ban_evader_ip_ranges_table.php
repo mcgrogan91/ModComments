@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateBanEvaderIpsTable extends Migration
+class CreateBanEvaderIpRangesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,7 +12,7 @@ class CreateBanEvaderIpsTable extends Migration
      */
     public function up()
     {
-        Schema::create('ban_evader_ips', function($table) {
+        Schema::create('ban_evader_ip_ranges', function($table) {
             $table->increments('id');
             $table->integer('ban_evader_id');
             $table->foreign('ban_evader_id')->references('id')->on('ban_evaders');
@@ -29,6 +29,6 @@ class CreateBanEvaderIpsTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('ban_evader_ip_ranges');
     }
 }

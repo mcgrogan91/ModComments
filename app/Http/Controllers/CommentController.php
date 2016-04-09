@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace ModTools\Http\Controllers;
 
-use App\Profile;
-use App\Comment;
+
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
+use ModTools\Http\Controllers\Controller;
+use ModTools\Comments\Profile;
+use PhpParser\Comment;
 use Response;
 
 class CommentController extends Controller

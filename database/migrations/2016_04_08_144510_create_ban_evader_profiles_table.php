@@ -16,7 +16,7 @@ class CreateBanEvaderProfilesTable extends Migration
             $table->increments('id');
             $table->integer('ban_evader_id');
             $table->foreign('ban_evader_id')->references('id')->on('ban_evaders');
-            $table->string('profile_id');
+            $table->string('profile_id')->nullable();
             $table->timestamps();
         });
     }
