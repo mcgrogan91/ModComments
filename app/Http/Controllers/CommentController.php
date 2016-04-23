@@ -4,9 +4,9 @@ namespace ModTools\Http\Controllers;
 
 
 use Illuminate\Http\Request;
+use ModTools\Comments\Comment;
 use ModTools\Http\Controllers\Controller;
 use ModTools\Comments\Profile;
-use PhpParser\Comment;
 use Response;
 
 class CommentController extends Controller

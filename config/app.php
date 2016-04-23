@@ -143,6 +143,7 @@ return [
         ModTools\Providers\AppServiceProvider::class,
         ModTools\Providers\EventServiceProvider::class,
         ModTools\Providers\RouteServiceProvider::class,
+        Barryvdh\Cors\ServiceProvider::class,
 
     ],
 

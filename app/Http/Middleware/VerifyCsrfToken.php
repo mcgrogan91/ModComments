@@ -1,6 +1,6 @@
 <?php
 
-namespace ModTools\Http\Middleware;
+namespace Modtools\Http\Middleware;
 
 use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken as BaseVerifier;
 use Closure;
@@ -27,10 +27,10 @@ class VerifyCsrfToken extends BaseVerifier
      */
     public function handle($request, Closure $next)
     {
-        if ( ! ($request->path() === "comment" && $request->isMethod('post')))
-        {
-            return parent::handle($request, $next);
-        }
+//        if ( ! ($request->path() === "comment" && $request->isMethod('post')))
+//        {
+//            return parent::handle($request, $next);
+//        }
 
         return $next($request);
     }
