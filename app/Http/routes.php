@@ -45,6 +45,7 @@ Route::group(['middleware' => ['cors']], function()
 
             Route::get('evaders', 'BanEvasion\BanEvaderController@ipList');
             Route::get('clear', 'BanEvasion\BanEvaderController@clearCache');
+            Route::get('suspicious/{ip}', 'BanEvasion\BanEvaderController@getSuspiciousLists');
             Route::get('find_evader/{input}', 'BanEvasion\BanEvaderController@findEvasionInformation');
             Route::get('account_matches/{id}', 'BanEvasion\BanEvaderController@findAccounts');
             Route::get('ip_matches/{ip}', 'BanEvasion\BanEvaderController@findRanges');

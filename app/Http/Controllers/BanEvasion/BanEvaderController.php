@@ -32,6 +32,55 @@ class BanEvaderController extends Controller
         return $evaderIPs;
     }
     
+    public function getSuspiciousLists($ip)
+    {
+        $suspicious = [];
+        if (str_contains($ip, ".")) {
+            $ips = explode(".", rtrim($ip, '.'));
+            if (count($ips) > 1) {
+                
+                $curIP = sprintf("%d.%d.", $ips[0], $ips[1]);
+                $range = BanEvaderIPRange::fromTagProRange($curIP);
+                $first = new Address($range['first_address']);
+                $last = new Address($range['last_address']);
+                
+                $ranges = BanEvaderIPRange::where('first_address', '>=', $first->get())
+                    ->where('last_address', '<=', $last->get())->get();
+                
+                if (count($ranges) > 0) {
+                    $pattern = $this->buildRegex($ips);
+                    foreach ($ranges as $range) {
+                        $matches = [];
+                        $is_match = preg_match($pattern, $range->tagpro, $matches);
+                        $suspicious[count($matches)][] = $range->tagpro;
+                    }
+                    
+                }
+            }
+        }
+        return $suspicious;
+    }
+    
+    private function buildRegex($array)
+    {
+        $regex = "//";
+        switch(count($array)) {
+            case 1:
+                $regex = sprintf('/%d(\.?$)/', $array[0]);
+                break;
+            case 2:
+                $regex = sprintf('/%d\.(%d\.)?/', $array[0], $array[1]);
+                break;
+            case 3:
+                $regex = sprintf('/%d\.(%d\.(%d\.)?)?/', $array[0], $array[1], $array[2]);
+                break;
+            case 4:
+                $regex = sprintf('/%d\.(%d\.(%d\.(%d$)?)?)?/', $array[0], $array[1], $array[2], $array[3]);
+                break;
+        }
+        return $regex;
+    }
+    
     public function clearCache()
     {
         Cache::forget('ip_list');
@@ -45,6 +94,7 @@ class BanEvaderController extends Controller
             return $this->findAccounts($input);
         }
     }
+    
     public function findRanges($ip)
     {
         $range = BanEvaderIPRange::fromTagProRange($ip);
@@ -55,6 +105,7 @@ class BanEvaderController extends Controller
             ->where('last_address', '>=', $first->get())
             ->where('first_address', '<=', $last->get())
             ->where('last_address', '>=', $last->get())->lists('ban_evader_id')->toArray();
+        
         return response()->json($this->loadEvaders($evaderIds), 200);
     }
 
