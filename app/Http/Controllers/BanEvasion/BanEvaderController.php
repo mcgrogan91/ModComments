@@ -1,6 +1,7 @@
 <?php
 namespace ModTools\Http\Controllers\BanEvasion;
 
+use Illuminate\Support\Facades\Cache;
 use JAAulde\IP\V4\Address;
 use ModTools\BanEvasion\BanEvader;
 use ModTools\BanEvasion\BanEvaderIPRange;
@@ -10,6 +11,32 @@ use ModTools\Http\Controllers\Controller;
 class BanEvaderController extends Controller
 {
 
+    public function ipList()
+    {
+        $evaderIPs = null;
+        $evaderIPs = Cache::rememberForever('ip_list', function() {
+            error_log('cache miss');
+            $ranges = BanEvaderIPRange::whereRaw('first_address = last_address')->get();
+            $ips = [];
+            foreach ($ranges as $range) {
+                $ips[] = $range->tagpro;
+            }
+            return json_encode($ips);
+        });
+
+        header('Content-type: application/json', true);
+        header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+        header("Cache-Control: post-check=0, pre-check=0", false);
+        header("Pragma: no-cache");
+        
+        return $evaderIPs;
+    }
+    
+    public function clearCache()
+    {
+        Cache::forget('ip_list');
+    }
+    
     public function findEvasionInformation($input)
     {
         if (str_contains($input, ".")) {

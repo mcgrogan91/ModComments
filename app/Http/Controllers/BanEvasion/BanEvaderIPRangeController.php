@@ -8,6 +8,7 @@
 
 namespace ModTools\Http\Controllers\BanEvasion;
 
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Input;
 use JAAulde\IP\V4\Address;
 use ModTools\BanEvasion\BanEvader;
@@ -62,6 +63,8 @@ class BanEvaderIPRangeController extends Controller
         $range->ban_evader_id = $evader->id;
         $range->save();
 
+        Cache::forget('ip_list');
+        
         return response()->json($range, 200);
     }
 
@@ -88,6 +91,9 @@ class BanEvaderIPRangeController extends Controller
 
             $response = response()->json($range, 200, array('Access-Control-Allow-Origin' => '*'), JSON_PRETTY_PRINT);
         }
+
+        Cache::forget('ip_list');
+        
         return $response;
     }
 
@@ -95,6 +101,8 @@ class BanEvaderIPRangeController extends Controller
     {
         BanEvaderIPRange::find($id)->delete();
 
+        Cache::forget('ip_list');
+        
         return response("OK", 200, array('Access-Control-Allow-Origin' => '*'));
     }
 }
