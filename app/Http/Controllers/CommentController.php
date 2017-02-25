@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use ModTools\Comments\Comment;
 use ModTools\Http\Controllers\Controller;
 use ModTools\Comments\Profile;
+use ModTools\BanEvasion\BanEvaderProfile;
+use ModTools\BanEvasion\BanEvader;
 use Response;
 
 class CommentController extends Controller
@@ -66,14 +68,31 @@ class CommentController extends Controller
     public function show($id)
     {
       $comments = [];
+      $evasionComments = [];
       $profile = Profile::where([
         'tagpro_identifier' => $id
         ])->first();
       if($profile) {
-        $comments = $profile->comments;
+          $comments = $profile->comments;
+          $evasionProfile = BanEvaderProfile::where('profile_id', $id)->first();
+          // I can do this for IP's, I just don't have the energy to do it right now
+          if ($evasionProfile) {
+            if (!str_contains($id, ".")) {
+                $evaderIds = $evasionProfile->ban_evader->profiles->pluck('profile_id')->filter(function($evader) use ($id) {
+                    return $evader !== $id;
+                });
+                foreach ($evaderIds as $evaderId) {
+                    $evasionComments[$evaderId] = Profile::where([
+                        'tagpro_identifier' => $evaderId
+                    ])->first()->comments;
+                }
+            }
+          }
+
+
       }
 
-      return response(view('comments', ['comments' => $comments]))
+      return response(view('comments', ['comments' => $comments, 'profiles' => $evasionComments]))
         ->header('Access-Control-Allow-Origin', '*');
 
         //return Response::json($comments, 200, array('Access-Control-Allow-Origin' => '*'));
