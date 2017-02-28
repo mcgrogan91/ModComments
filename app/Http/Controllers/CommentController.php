@@ -82,9 +82,14 @@ class CommentController extends Controller
                     return $evader !== $id;
                 });
                 foreach ($evaderIds as $evaderId) {
-                    $evasionComments[$evaderId] = Profile::where([
+                    $userProfile = Profile::where([
                         'tagpro_identifier' => $evaderId
-                    ])->first()->comments;
+                    ])->first();
+                    if ($userProfile) {
+                        $evasionComments[$evaderId] = $userProfile->comments;
+                    } else {
+                        error_log("$evaderId was in array but did not exist");
+                    }
                 }
             }
           }
