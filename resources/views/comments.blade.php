@@ -7,7 +7,7 @@
 <div>
     @if($profiles)
       <hr/>
-      <p>Here are come comments from other profiles on this Ban Evasion Profile</p><br/>
+      <p>Here are some comments from other profiles on this Ban Evasion Profile</p><br/>
       @foreach($profiles as $profile => $profileComments)
         <div>
           Profile ID: <a href = "/moderate/users/{{$profile}}">{{$profile}}</a><br/>
