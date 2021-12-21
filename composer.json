@@ -7,8 +7,8 @@
     "require": {
         "php": ">=5.5.9",
         "laravel/framework": "5.1.*",
-        "illuminate/Http": "^5.1",
-        "illuminate/HTML": "^5.0",
+        "illuminate/http": "^5.1",
+        "illuminate/html": "^5.0",
         "iamcal/lib_autolink": "^1.7",
         "jaaulde/php-ipv4": "^1.1",
         "barryvdh/laravel-cors": "^0.8.0"
