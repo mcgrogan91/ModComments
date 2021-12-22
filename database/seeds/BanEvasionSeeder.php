@@ -1,9 +1,9 @@
 <?php
 
 use Illuminate\Database\Eloquent\Model;
-use ModTools\BanEvasion\BanEvader;
-use ModTools\BanEvasion\BanEvaderProfile;
-use ModTools\BanEvasion\BanEvaderIPRange;
+use ModTools\Models\BanEvasion\BanEvader;
+use ModTools\Models\BanEvasion\BanEvaderProfile;
+use ModTools\Models\BanEvasion\BanEvaderIPRange;
 
 /**
  * Created by PhpStorm.

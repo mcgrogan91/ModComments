@@ -4,11 +4,9 @@ namespace ModTools\Http\Controllers;
 
 
 use Illuminate\Http\Request;
-use ModTools\Comments\Comment;
-use ModTools\Http\Controllers\Controller;
-use ModTools\Comments\Profile;
-use ModTools\BanEvasion\BanEvaderProfile;
-use ModTools\BanEvasion\BanEvader;
+use ModTools\Models\Comments\Comment;
+use ModTools\Models\Comments\Profile;
+use ModTools\Models\BanEvasion\BanEvaderProfile;
 use Response;
 
 class CommentController extends Controller

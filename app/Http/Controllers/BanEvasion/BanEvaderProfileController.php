@@ -2,8 +2,8 @@
 namespace ModTools\Http\Controllers\BanEvasion;
 
 use Illuminate\Support\Facades\Input;
-use ModTools\BanEvasion\BanEvader;
-use ModTools\BanEvasion\BanEvaderProfile;
+use ModTools\Models\BanEvasion\BanEvader;
+use ModTools\Models\BanEvasion\BanEvaderProfile;
 use ModTools\Http\Controllers\Controller;
 
 class BanEvaderProfileController extends Controller

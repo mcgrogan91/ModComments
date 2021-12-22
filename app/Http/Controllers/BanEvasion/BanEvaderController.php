@@ -3,9 +3,9 @@ namespace ModTools\Http\Controllers\BanEvasion;
 
 use Illuminate\Support\Facades\Cache;
 use JAAulde\IP\V4\Address;
-use ModTools\BanEvasion\BanEvader;
-use ModTools\BanEvasion\BanEvaderIPRange;
-use ModTools\BanEvasion\BanEvaderProfile;
+use ModTools\Models\BanEvasion\BanEvader;
+use ModTools\Models\BanEvasion\BanEvaderIPRange;
+use ModTools\Models\BanEvasion\BanEvaderProfile;
 use ModTools\Http\Controllers\Controller;
 
 class BanEvaderController extends Controller
