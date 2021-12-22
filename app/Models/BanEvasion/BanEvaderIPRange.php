@@ -6,7 +6,7 @@
  * Time: 10:18 PM
  */
 
-namespace ModTools\BanEvasion;
+namespace ModTools\Models\BanEvasion;
 
 
 use Illuminate\Database\Eloquent\Model;
@@ -30,7 +30,7 @@ class BanEvaderIPRange extends Model
 
     public function ban_evader()
     {
-        return $this->belongsTo('ModTools\BanEvasion\BanEvader');
+        return $this->belongsTo('ModTools\Models\BanEvasion\BanEvader');
     }
 
     public function getFirstAddressAttribute($value)

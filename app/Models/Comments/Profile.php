@@ -1,6 +1,6 @@
 <?php
 
-namespace ModTools\Comments;
+namespace ModTools\Models\Comments;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -10,6 +10,6 @@ class Profile extends Model
 
   public function comments()
   {
-    return $this->hasMany('ModTools\Comments\Comment');
+    return $this->hasMany('ModTools\Models\Comments\Comment');
   }
 }

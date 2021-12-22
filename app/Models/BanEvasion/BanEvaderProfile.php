@@ -1,5 +1,5 @@
 <?php
-namespace ModTools\BanEvasion;
+namespace ModTools\Models\BanEvasion;
 
 
 use Illuminate\Database\Eloquent\Model;
@@ -15,6 +15,6 @@ class BanEvaderProfile extends Model
 
     public function ban_evader()
     {
-        return $this->belongsTo('ModTools\BanEvasion\BanEvader');
+        return $this->belongsTo('ModTools\Models\BanEvasion\BanEvader');
     }
 }
